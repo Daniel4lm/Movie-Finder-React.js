@@ -12,7 +12,7 @@ This project was made by using [React.js](https://reactjs.org/) library and boot
 Source code is written in Visual Studio Code, where we can use terminal to start app.
 I have installed and configured *yarn* package manager because of shorter commands and higher speed.
     
-    ``` npm install -g yarn ```
+``` npm install -g yarn ```
 
 Once in the project root, for installing all dependencies: 
 
