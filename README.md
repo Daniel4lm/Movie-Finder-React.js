@@ -28,7 +28,7 @@ To ensure that existing React app project uses TypeScript :
 
 ```yarn add typescript @types/node @types/react @types/react-dom @types/jest```
 
-In the project directory, project can be run with the following script:
+In the project directory, app can be run with the following script:
 
 ```yarn start```
 
