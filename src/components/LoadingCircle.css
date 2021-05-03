@@ -1,0 +1,44 @@
+.loading-circle {
+    position: relative;
+    margin: 4rem auto;
+    background-color: transparent;
+    border-radius: 50%;    
+    display: grid;
+    align-content: center;
+}
+
+.loading-circle:before {
+    content: '';
+    position: absolute;
+    width: inherit;
+    height: inherit;
+    border: 4px solid rgb(212, 212, 212);
+    border-left: 4px solid #09f;
+    border-radius: 50%;
+    animation: spin-intro 600ms linear infinite;
+}
+
+.small {
+    width: 45px;
+    height: 45px;
+}
+
+.large {
+    width: 85px;
+    height: 85px;
+}
+
+@keyframes spin-intro {
+    100% {
+        transform: rotateZ(360deg);
+    }
+}
+
+@keyframes spin-intro {
+    from {
+      transform: rotateZ(0deg);
+    }
+    to {
+      transform: rotateZ(360deg);
+    }
+}

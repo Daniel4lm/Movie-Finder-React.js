@@ -1,12 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { MovieProvider, useMovieContext } from './context/MovieContext';
 import './index.css';
-import App from './App';
+import Home from './Home';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <MovieProvider>
+      <Home />
+    </MovieProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );

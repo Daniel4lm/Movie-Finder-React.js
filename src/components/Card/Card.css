@@ -1,0 +1,103 @@
+
+.card {
+    position: relative;
+    width: 200px;
+    height: 350px;
+    
+    display: flex;
+    flex-direction: column;
+    border: 4px solid rgb(184, 184, 184);
+    padding: 0.2rem;
+    /*border-radius: 0.4rem;*/
+}
+
+.link {
+    color: inherit;
+    text-decoration: none;
+}
+
+.card:hover  {
+    transition: .5s ease;
+    /*opacity: 0.5;
+    z-index: 2;*/
+    background: rgb(226, 226, 226);
+    border-color: rgb(146, 146, 146);
+
+}
+
+.card:hover .card-image{
+    transition: .5s ease;
+    opacity: 0.9;
+}
+
+.card:hover .cover {
+    transition: .5s ease;
+    z-index: 2;
+    opacity: 0.7;
+}
+
+.card-image {
+    width:100%;
+    height:80%;
+    object-fit: fill;    
+}
+
+.n-p {
+    width:100%;
+    height:80%;
+    background: #b2bec3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-title {
+    /*position: absolute;
+    top: 40%;
+    left: 50%;
+    max-width: 50%;
+    transform: translate(-50%, -50%);*/
+    width: 100%;
+    height: 20%;
+    display: grid;
+    font-size: inherit;
+    color: inherit;
+    text-decoration: none;
+}
+
+.card-title span {
+    padding: 0 0.1rem;
+    text-align: center;
+    justify-self: center;
+    align-self: center;
+    overflow: hidden;
+}
+
+hr {
+    border: 0;
+    border-top: 1px solid #eee;
+}
+
+.cover {
+    position: absolute;
+    left: 0.2rem;
+    top: 0.2rem;
+    right: 0.2rem;
+    opacity: 0;
+    /*width: 100%;*/
+    /*height: 80%;*/
+    bottom: 20%;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(88, 88, 88);
+    
+}
+
+@media screen and (min-width: 360px) and (max-width: 470px) {
+    .card {
+        width: 150px;
+        height: 200px;
+    }    
+}
