@@ -92,10 +92,6 @@ export const DetailsPage = () => {
 
     }, [id]);
 
-    useEffect(() => {
-        console.log(detailsState.movie_tv)
-    }, [detailsState.movie_tv])
-
     return (
         <div className='details-container'>
             <Helmet>
