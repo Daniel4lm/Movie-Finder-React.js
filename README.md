@@ -87,10 +87,10 @@ This runs the app in the development mode. Open [http://localhost:3000](http://l
     - Testing all necessary end points from TMDB to fetch data.
     ```
         Data fetching links:
-        `` https://api.themoviedb.org/3/movie/top_rated?api_key={api_key}&language=en-US `` <- for top 10 movies
-        ``  https://api.themoviedb.org/3/tv/top_rated?api_key={api_key}&language=en-US `` <- for top 10 tv shows
-        `` https://api.themoviedb.org/3/search/movie?api_key={api_key}&language=en-US&query={value}&page=1`` <- search movie data by name
-        `` https://api.themoviedb.org/3/search/tv?api_key={api_key}&language=en-US&page=1&query={value}&page=1`` <- search tv show data by name
+          https://api.themoviedb.org/3/movie/top_rated?api_key={api_key}&language=en-US  <- for top 10 movies
+          https://api.themoviedb.org/3/tv/top_rated?api_key={api_key}&language=en-US  <- for top 10 tv shows
+          https://api.themoviedb.org/3/search/movie?api_key={api_key}&language=en-US&query={value}&page=1 <- search movie data by name
+          https://api.themoviedb.org/3/search/tv?api_key={api_key}&language=en-US&page=1&query={value}&page=1 <- search tv show data by name
     ```
         API key is stored inside .env file as react environment variable, accessible in our app.
     - Creating basic app structure, two main components(App.tsx and NavBar.tsx). 
