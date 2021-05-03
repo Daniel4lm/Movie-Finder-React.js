@@ -25,6 +25,11 @@ const detailsReducer = (detailsState: InitialStateType, action: any) => {
                 loading: false,
                 movie_tv: action.movietv
             };
+        case "UPDATE_TRAILERS":
+            return {
+                ...detailsState,
+                movie_tv: { ...detailsState.movie_tv, ...{ trailers: action.trailers } }
+            }
         case "SEARCH_MOVIETV_FAILURE":
             return {
                 ...detailsState,

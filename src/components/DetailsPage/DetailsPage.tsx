@@ -3,7 +3,7 @@ import { Redirect, useParams, useHistory, useLocation } from 'react-router-dom';
 import { Helmet, HelmetProvider } from "react-helmet-async";
 import { detailsReducer, initialState } from "../../reducer/details.reducer";
 import { useMovieContext } from '../../context/MovieContext';
-import { detailsUrls } from "../../lib/urlHelper";
+import { detailsUrls, trailersUrls } from "../../lib/urlHelper";
 import './index.css';
 import '../LoadingCircle.css';
 
@@ -29,6 +29,7 @@ export const DetailsPage = () => {
 
     const basePath = location.pathname.match(/[^0-9 \/]/g)?.join('');
 
+    /* Setting poster and backdrop urls */
     const setPicturesUrls = (movietv: any, width: number) => {
 
         if (movietv.backdrop_path === null) {
@@ -37,6 +38,29 @@ export const DetailsPage = () => {
         return {
             ...movietv,
             backdrop_path: `https://image.tmdb.org/t/p/original${movietv.backdrop_path}`,
+        }
+    }
+
+    /* Fetch trailers */
+    const getTrailers = async (id: string) => {
+        const baseUrl: string = trailersUrls[basePath ? basePath : ''];
+        const detailsUrl: string = baseUrl.replace(/{(movie|tv)(_id})/i, id);
+
+        try {
+            const response = await fetch(detailsUrl);
+            const trailersData = await response.json();
+            const trailers = trailersData?.results.map((trailer: any) => {
+                if (trailer.type === 'Trailer') {
+                    return {
+                        url: ` https://www.youtube.com/watch?v=${trailer.key}`,
+                        name: trailer.name
+                    }
+                }
+            }).filter((trailerUrl: any) => trailerUrl !== undefined);
+
+            dispatch({ type: 'UPDATE_TRAILERS', trailers: trailers || [] });
+        } catch (error) {
+            dispatch({ type: 'SEARCH_MOVIETV_FAILURE', error: error.message || error.statusText });
         }
     }
 
@@ -50,6 +74,7 @@ export const DetailsPage = () => {
             const response = await fetch(detailsUrl);
             const movieData = await response.json();
             dispatch({ type: 'SEARCH_MOVIETV_SUCCESS', movietv: setPicturesUrls(movieData, 300) || {} });
+            getTrailers(id);
         } catch (error) {
             dispatch({ type: 'SEARCH_MOVIETV_FAILURE', error: error.message || error.statusText });
             return <Redirect to="*" />;
@@ -66,6 +91,10 @@ export const DetailsPage = () => {
         fetchMovie(id);
 
     }, [id]);
+
+    useEffect(() => {
+        console.log(detailsState.movie_tv)
+    }, [detailsState.movie_tv])
 
     return (
         <div className='details-container'>
@@ -109,6 +138,19 @@ export const DetailsPage = () => {
                             {detailsState.movie_tv.overview}
                         </p>
                         <br></br>
+
+                        <div className='trailers'>
+                            <p><strong>Trailers: </strong></p>
+                            {detailsState.movie_tv.trailers?.map((trailer: any) => {
+                                return (
+                                    <div key={trailer.name} className='trailer'>
+                                        <i className="fab fa-youtube"></i>
+                                        <a className='trailer-link' href={trailer.url}>{trailer.name}</a>
+                                    </div>
+
+                                )
+                            })}
+                        </div>
 
                         <div className="genres">
                             <span><b>Genres </b></span>

@@ -22,6 +22,37 @@
     margin-bottom: 0.4rem;
 }
 
+.trailers {
+    /*width: max-content;*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1.5rem 0;
+    padding: 0 1.5rem;
+    font-size: 1.2em;
+}
+
+.trailer {
+    display: flex;
+    align-items: center;
+}
+
+.trailer i {
+    color: #d63031;
+}
+
+.trailer-link {
+    text-decoration: none;
+    color: inherit;
+    margin-left: 0.4rem;
+    margin-bottom: 0.4rem;
+}
+
+.trailer-link:hover {
+    text-decoration: underline;
+    color: #00b894;
+}
+
 .back-track {
     width: 100%;
     margin: 1.2rem 0;
