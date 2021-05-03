@@ -8,7 +8,7 @@ This project was made by using [React.js](https://reactjs.org/) library and boot
 
 *TDB API key* used in this app is stored inside **.env** file as react environment variable and it's not uploaded to the github repository:
 
-```REACT_APP_MOVIE_DB_API_KEY=*******************************```
+`REACT_APP_MOVIE_DB_API_KEY=*******************************`
 
 
 
