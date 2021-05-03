@@ -1,5 +1,6 @@
 ## Movie Finder Web App
 
+
 This project was made by using [React.js](https://reactjs.org/) library and bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 *This app have the functionalities of displaying the top 10 rated movies/TV shows, a search function for both(movie & tv serie section), and a detail view for individual selected items.*
@@ -33,6 +34,9 @@ In the project directory, project can be run with the following script:
 
 This runs the app in the development mode. Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
+
+
+### Project structure
 
 :mag: *The project has the following structure as shown below :*
 ```
@@ -83,8 +87,9 @@ This runs the app in the development mode. Open [http://localhost:3000](http://l
    ...
    
    ```
-   
-##### **Short daily history:**
+
+
+#### **Short daily history:**
 - (27.04.2021)
     - Created empty react application using Create React App (with typescript):
         `` npx create-react-app my-app --template typescript ``
