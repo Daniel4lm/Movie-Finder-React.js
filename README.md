@@ -5,7 +5,12 @@ This project was made by using [React.js](https://reactjs.org/) library and boot
 *This app have the functionalities of displaying the top 10 rated movies/TV shows, a search function for both(movie & tv serie section), and a detail view for individual selected items.*
 
 **TheMovieDB web API** is used to provide data from their end points. 
-*TDB API key used in this app is stored inside .env file as react environment variable and it's not uploaded to the github repository.*
+
+*TDB API key* used in this app is stored inside **.env** file as react environment variable and it's not uploaded to the github repository:
+
+```REACT_APP_MOVIE_DB_API_KEY=*******************************```
+
+
 
 ## Available Scripts in project
 
