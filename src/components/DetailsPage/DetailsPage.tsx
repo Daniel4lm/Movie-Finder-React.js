@@ -145,7 +145,7 @@ export const DetailsPage = () => {
                                 return (
                                     <div key={trailer.name} className='trailer'>
                                         <i className="fab fa-youtube"></i>
-                                        <a className='trailer-link' href={trailer.url}>{trailer.name}</a>
+                                        <a className='trailer-link' href={trailer.url} target="_blank" rel="noopener noreferrer">{trailer.name}</a>
                                     </div>
 
                                 )
