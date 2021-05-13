@@ -9,7 +9,6 @@ import { NavBar } from '../Navigation/NavBar';
 export const SearchPage = () => {
 
     let location = useLocation();
-    const history = useHistory();
     const { state } = useMovieContext();
 
     const title = location.pathname === '/movies' ? 'movies' : 'TV shows';

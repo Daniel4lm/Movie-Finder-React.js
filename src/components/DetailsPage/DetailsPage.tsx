@@ -1,6 +1,6 @@
-import React, { useEffect, useState, useReducer, useCallback } from 'react'
+import React, { useEffect, useReducer, useCallback } from 'react'
 import { Redirect, useParams, useHistory, useLocation } from 'react-router-dom';
-import { Helmet, HelmetProvider } from "react-helmet-async";
+import { Helmet } from "react-helmet-async";
 import { detailsReducer, initialState } from "../../reducer/details.reducer";
 import { useMovieContext } from '../../context/MovieContext';
 import { detailsUrls, trailersUrls } from "../../lib/urlHelper";
@@ -27,7 +27,7 @@ export const DetailsPage = () => {
     const { state, movieTvDispatch } = useMovieContext();
     const [detailsState, dispatch] = useReducer(detailsReducer, initialState);
 
-    const basePath = location.pathname.match(/[^0-9 \/]/g)?.join('');
+    const basePath = location.pathname.match(/[^0-9 /]/g)?.join('');
 
     /* Setting poster and backdrop urls */
     const setPicturesUrls = (movietv: any, width: number) => {

@@ -1,16 +1,17 @@
 import React, { Fragment, useEffect } from "react";
 import { useMovieContext } from '../../context/MovieContext';
 import { Card } from '../Card/Card';
-import { topRatedUrls } from "../../lib/urlHelper";
 import '../SearchPage/SearchPage.css';
 import '../LoadingCircle.css';
 import { NavBar } from "../Navigation/NavBar";
 
 export const HomePage = () => {
 
-    const { state, movieTvDispatch, fetchData } = useMovieContext();
+    const { state, movieTvDispatch } = useMovieContext();
 
     const title = state.toggleTab === 'tvseries' ? 'TV shows' : 'movies';
+
+    console.log(process.env.REACT_APP_MOVIE_DB_API_KEY)
 
     useEffect(() => {
         movieTvDispatch({
