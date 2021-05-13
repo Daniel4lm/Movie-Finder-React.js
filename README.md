@@ -12,10 +12,10 @@ This project was made by using [React.js](https://reactjs.org/) library and boot
 `REACT_APP_MOVIE_DB_API_KEY=*******************************`
 
 
-## Deploying Movie Finder Web applications to Netlify 
+## Deploying Movie Finder app to Netlify 
 
-  Here is a working link on [Netlify](https://movie-finder-netlify.netlify.app/).
-  This application hosten on Netlify is connected with this Github repository so any new commited change made here is reflected and new build is automaticaly started on Netliffy.
+  Here is a working link on [Movie-Finder-Netlify.netlify.app](https://movie-finder-netlify.netlify.app/).
+  This application, hosted on Netlify is connected with this Github repository so any new commited change made here is reflected and new build is automaticaly started on Netliffy.
 
 
 ## Available Scripts in project
