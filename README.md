@@ -11,6 +11,12 @@ This project was made by using [React.js](https://reactjs.org/) library and boot
 
 `REACT_APP_MOVIE_DB_API_KEY=*******************************`
 
+![image](https://user-images.githubusercontent.com/1280747/124475472-0ac42800-dda2-11eb-8080-6056dcc46464.png)
+
+![image](https://user-images.githubusercontent.com/1280747/124475504-17488080-dda2-11eb-9c10-582e9bfa0810.png)
+
+![image](https://user-images.githubusercontent.com/1280747/124475639-3ba45d00-dda2-11eb-9e60-16945c3d1d60.png)
+
 
 ## Deploying Movie Finder app to Netlify 
 
